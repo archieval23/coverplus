@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSwabIssuance" targetNamespace="http://tempuri.org/dsSwabIssuance.xsd" xmlns:mstns="http://tempuri.org/dsSwabIssuance.xsd" xmlns="http://tempuri.org/dsSwabIssuance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSwabIssuance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSwabIssuance" msprop:Generator_UserDSName="dsSwabIssuance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SwabIssuance" msprop:Generator_TableClassName="SwabIssuanceDataTable" msprop:Generator_TableVarName="tableSwabIssuance" msprop:Generator_RowChangedName="SwabIssuanceRowChanged" msprop:Generator_TablePropName="SwabIssuance" msprop:Generator_RowDeletingName="SwabIssuanceRowDeleting" msprop:Generator_RowChangingName="SwabIssuanceRowChanging" msprop:Generator_RowEvHandlerName="SwabIssuanceRowChangeEventHandler" msprop:Generator_RowDeletedName="SwabIssuanceRowDeleted" msprop:Generator_RowClassName="SwabIssuanceRow" msprop:Generator_UserTableName="SwabIssuance" msprop:Generator_RowEvArgName="SwabIssuanceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" minOccurs="0" />
+              <xs:element name="TestResult" msprop:Generator_ColumnVarNameInTable="columnTestResult" msprop:Generator_ColumnPropNameInRow="TestResult" msprop:Generator_ColumnPropNameInTable="TestResultColumn" msprop:Generator_UserColumnName="TestResult" type="xs:string" minOccurs="0" />
+              <xs:element name="TestInterpretation" msprop:Generator_ColumnVarNameInTable="columnTestInterpretation" msprop:Generator_ColumnPropNameInRow="TestInterpretation" msprop:Generator_ColumnPropNameInTable="TestInterpretationColumn" msprop:Generator_UserColumnName="TestInterpretation" type="xs:string" minOccurs="0" />
+              <xs:element name="DateSpecimenCollected" msprop:Generator_ColumnVarNameInTable="columnDateSpecimenCollected" msprop:Generator_ColumnPropNameInRow="DateSpecimenCollected" msprop:Generator_ColumnPropNameInTable="DateSpecimenCollectedColumn" msprop:Generator_UserColumnName="DateSpecimenCollected" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
