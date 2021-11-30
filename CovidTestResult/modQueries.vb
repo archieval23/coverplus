@@ -127,7 +127,7 @@ Module modQueries
     Public Function loadSwabIssuanceResultMod(id As Integer)
         Try
             Connect()
-            Dim cmd As New MySqlCommand("select CONCAT(a.LastName, ', ', a.FirstName) AS FullName, d.TestName, b.TestResult, b.TestInterpretation, b.DateSpecimenCollected 
+            Dim cmd As New MySqlCommand("select a.ID, CONCAT(a.LastName, ', ', a.FirstName) AS FullName, d.TestName, b.TestResult, b.TestInterpretation, b.DateSpecimenCollected, b.SwabIssuanceCode 
             from tbl_customer a 
             INNER JOIN tbl_medicalDetails c on a.ID = c.CustomerID
             INNER JOIN tbl_testType d on c.TestType = d.ID
@@ -165,7 +165,7 @@ Module modQueries
     Public Function loadSwabIssuanceResultforReportMod(id As Integer)
         Try
             Connect()
-            Dim cmd As New MySqlCommand("select a.ID, CONCAT(a.FirstName, ' ', a.MiddleName, ' ', a.LastName) AS FullName, a.address, a.contactnumber, a.gender, c.TestName, d.TestResult, d.TestInterpretation, d.DateSpecimenCollected, b.hospitalname, b.clinicianname, b.datetested 
+            Dim cmd As New MySqlCommand("select a.ID, CONCAT(a.FirstName, ' ', a.MiddleName, ' ', a.LastName) AS FullName, a.address, a.contactnumber, a.gender, c.TestName, d.TestResult, d.TestInterpretation, d.DateSpecimenCollected, b.hospitalname, b.clinicianname, b.datetested, d.SwabIssuanceCode
             from tbl_customer a 
             INNER JOIN tbl_medicalDetails b on a.ID = b.CustomerID
             INNER JOIN tbl_testType c on b.TestType = c.ID
@@ -222,7 +222,7 @@ Module modQueries
             End If
 
             Dim guid As String = System.Guid.NewGuid.ToString()
-            Dim swabIssuanceID As String = String.Format("CV-{0}-{1}-{2}-{3}", CustomerID, testTypeID, datespecimen.ToString("MMddyyyy"), result)
+            Dim swabIssuanceID As String = String.Format("CV-{0}-{1}-{2}", CustomerID, testTypeID, datespecimen.ToString("MMddyyyy"))
 
             Dim cmdInsert As New MySqlCommand("Insert into tbl_swabissuance(CustomerID,TestResult,TestInterpretation,DateSpecimenCollected,SwabIssuanceCode,UserID)VALUES(@1,@2,@3,@4,@5,@6)", con)
             With cmdInsert

@@ -3,7 +3,7 @@ Imports System.Net.Mail
 Imports System.Text
 
 Public Class FrmSendEmail
-    Public fullname, email, gender, encrptedData As String
+    Public fullname, email, gender, encrptedData, link As String
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnOpenFile.Click
         OpenFileDialog1.ShowDialog()
@@ -28,10 +28,10 @@ Public Class FrmSendEmail
                 content.AppendLine("<br>")
                 content.AppendLine("Your COVID-19 Test Result and Certification has come out. To view your result, please see the attachment below.<br>")
                 content.AppendLine("<br>")
-                content.AppendLine("If you want to verify your certification, scan the QR code and use the given Private Key below to access the result.<br>")
+                content.AppendLine("If you want to verify your certification, scan the QR code and verify using your registered Birthday.<br>")
                 content.AppendLine("<br>")
-                content.AppendLine("Key : <b>" & EncrptData(encrptedData) & "</b><br>")
-                content.AppendLine("<br>")
+                'content.AppendLine("Key : <b>" & EncrptData(encrptedData) & "</b><br>")
+                'content.AppendLine("<br>")
                 content.AppendLine("In case you have any questions, do not hesitate to contact or email us. We are open from Monday to Friday: 9:00-12:00NN and 1:00-5:00PM only.<br>")
                 content.AppendLine("<br>")
                 content.AppendLine("<b>Thank you,</b><br>")
@@ -43,7 +43,7 @@ Public Class FrmSendEmail
                 content.AppendLine("<br>")
                 content.AppendLine("If you have received this message in error, please notify the sender and delete the message.<br>")
 
-                Dim from As String = "gusionml173@gmail.com"
+                Dim from As String = "coverpluslife@gmail.com"
                 If String.IsNullOrEmpty(txtAttachfile.Text) Then
                     MsgBox("File Attachment is Required", vbInformation)
                 Else
@@ -63,7 +63,7 @@ Public Class FrmSendEmail
                                 .EnableSsl = True
                                 .Port = "587"
                                 .Host = "smtp.gmail.com"
-                                .Credentials = New Net.NetworkCredential(from, "hahahotdog12345")
+                                .Credentials = New Net.NetworkCredential(from, "SdYyJAh4UTVyhiX")
                                 .Send(mail)
                             End With
                         End Using

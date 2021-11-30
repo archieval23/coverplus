@@ -293,6 +293,8 @@ Partial Public Class dsSwabIssuance
         
         Private columnDateSpecimenCollected As Global.System.Data.DataColumn
         
+        Private columnSwabIssuanceCode As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -369,6 +371,14 @@ Partial Public Class dsSwabIssuance
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SwabIssuanceCodeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSwabIssuanceCode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -405,9 +415,9 @@ Partial Public Class dsSwabIssuance
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddSwabIssuanceRow(ByVal ID As Integer, ByVal CustomerID As Integer, ByVal TestResult As String, ByVal TestInterpretation As String, ByVal DateSpecimenCollected As Date) As SwabIssuanceRow
+        Public Overloads Function AddSwabIssuanceRow(ByVal ID As Integer, ByVal CustomerID As Integer, ByVal TestResult As String, ByVal TestInterpretation As String, ByVal DateSpecimenCollected As Date, ByVal SwabIssuanceCode As String) As SwabIssuanceRow
             Dim rowSwabIssuanceRow As SwabIssuanceRow = CType(Me.NewRow,SwabIssuanceRow)
-            Dim columnValuesArray() As Object = New Object() {ID, CustomerID, TestResult, TestInterpretation, DateSpecimenCollected}
+            Dim columnValuesArray() As Object = New Object() {ID, CustomerID, TestResult, TestInterpretation, DateSpecimenCollected, SwabIssuanceCode}
             rowSwabIssuanceRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowSwabIssuanceRow)
             Return rowSwabIssuanceRow
@@ -435,6 +445,7 @@ Partial Public Class dsSwabIssuance
             Me.columnTestResult = MyBase.Columns("TestResult")
             Me.columnTestInterpretation = MyBase.Columns("TestInterpretation")
             Me.columnDateSpecimenCollected = MyBase.Columns("DateSpecimenCollected")
+            Me.columnSwabIssuanceCode = MyBase.Columns("SwabIssuanceCode")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -450,6 +461,8 @@ Partial Public Class dsSwabIssuance
             MyBase.Columns.Add(Me.columnTestInterpretation)
             Me.columnDateSpecimenCollected = New Global.System.Data.DataColumn("DateSpecimenCollected", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDateSpecimenCollected)
+            Me.columnSwabIssuanceCode = New Global.System.Data.DataColumn("SwabIssuanceCode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSwabIssuanceCode)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -671,6 +684,21 @@ Partial Public Class dsSwabIssuance
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SwabIssuanceCode() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSwabIssuance.SwabIssuanceCodeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SwabIssuanceCode' in table 'SwabIssuance' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSwabIssuance.SwabIssuanceCodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsIDNull() As Boolean
             Return Me.IsNull(Me.tableSwabIssuance.IDColumn)
         End Function
@@ -727,6 +755,18 @@ Partial Public Class dsSwabIssuance
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetDateSpecimenCollectedNull()
             Me(Me.tableSwabIssuance.DateSpecimenCollectedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSwabIssuanceCodeNull() As Boolean
+            Return Me.IsNull(Me.tableSwabIssuance.SwabIssuanceCodeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSwabIssuanceCodeNull()
+            Me(Me.tableSwabIssuance.SwabIssuanceCodeColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

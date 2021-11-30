@@ -1,4 +1,5 @@
-﻿Imports Telerik.WinControls.UI
+﻿Imports QRCoder
+Imports Telerik.WinControls.UI
 
 Public Class FrmDashboard
     Public loggedUserID
@@ -69,6 +70,7 @@ Public Class FrmDashboard
                         gridSwabIssuanceResult.Columns(i).TextAlignment = ContentAlignment.MiddleCenter
                         gridSwabIssuanceResult.Columns(i).Width = 100
                     Next
+                    RadButton1.Enabled = True
                 Else
                     MsgBox("Customer Doesn't have Result yet", vbInformation)
                     gridSwabIssuanceResult.DataSource = Nothing
@@ -188,13 +190,16 @@ Public Class FrmDashboard
 
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
         Try
+            'Dim gen As New QRCodeGenerator
+            'Dim data = gen.CreateQrCode()
             If gridSwabIssuanceResult.Rows.Count > 0 Then
-                Dim fullname, address, cnumber, gender As String
+                Dim custID As Integer = gridSwabIssuanceResult.CurrentRow.Cells(0).Value.ToString()
+                Dim fullname, address, cnumber, gender, swabissuancecode As String
                 Dim testname, testresult, interpretation As String
                 Dim clinicname, clinicianname, datetested As String
                 Dim id As Integer
 
-                Dim dt As DataTable = loadSwabIssuanceResultforReportMod(Val(dropcustomer.SelectedValue))
+                Dim dt As DataTable = loadSwabIssuanceResultforReportMod(custID)
                 If dt.Rows.Count > 0 Then
                     For Each row As DataRow In dt.Rows
                         id = row("ID")
@@ -208,8 +213,20 @@ Public Class FrmDashboard
                         clinicname = row("hospitalname")
                         clinicianname = row("clinicianname")
                         datetested = row("datetested")
+                        swabissuancecode = row("SwabIssuanceCode")
                     Next
                     With FrmSwabResultReport
+                        Dim qrvalue As String = String.Format("http://coverplus.life/cover/login.php?key1={0}", EncrptData(swabissuancecode))
+                        Dim gen As New QRCodeGenerator
+                        Dim data = gen.CreateQrCode(qrvalue, QRCodeGenerator.ECCLevel.Q)
+                        Dim code As New QRCode(data)
+                        'data.SaveRawData("C:\QRCODE\", 6)
+                        PictureBox1.Image = code.GetGraphic(6)
+                        Dim savePic As New SaveFileDialog()
+                        Dim path As String = "C:\QRCODE\" + swabissuancecode + ".jpg"
+                        Dim dir As String = System.IO.Path.GetDirectoryName(path)
+                        PictureBox1.Image.Save(path)
+
                         .ID = id
                         .fullname = fullname
                         .address = address
@@ -226,14 +243,18 @@ Public Class FrmDashboard
                 End If
             Else
                 MsgBox("Please Generate Result first", vbInformation)
-                gridSwabIssuanceResult.DataSource = Nothing
+            gridSwabIssuanceResult.DataSource = Nothing
             End If
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 
     Private Sub RadButton6_Click(sender As Object, e As EventArgs) Handles RadButton6.Click
         refreshDashboard()
+    End Sub
+
+    Private Sub dropcustomer_SelectedIndexChanged(sender As Object, e As Data.PositionChangedEventArgs) Handles dropcustomer.SelectedIndexChanged
+        RadButton1.Enabled = False
     End Sub
 End Class

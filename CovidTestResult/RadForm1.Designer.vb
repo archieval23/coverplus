@@ -54,7 +54,7 @@ Partial Class RadForm1
         Me.RadGroupBox1.HeaderText = "LogIn"
         Me.RadGroupBox1.Location = New System.Drawing.Point(68, 37)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(339, 369)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(339, 406)
         Me.RadGroupBox1.TabIndex = 4
         Me.RadGroupBox1.Text = "LogIn"
         Me.RadGroupBox1.ThemeName = "Material"
@@ -66,7 +66,7 @@ Partial Class RadForm1
         Me.PictureBox1.Image = Global.CovidTestResult.My.Resources.Resources.logo
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(339, 211)
+        Me.PictureBox1.Size = New System.Drawing.Size(339, 229)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
@@ -76,7 +76,7 @@ Partial Class RadForm1
         Me.RadButton2.BackColor = System.Drawing.Color.Red
         Me.RadButton2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadButton2.ForeColor = System.Drawing.Color.White
-        Me.RadButton2.Location = New System.Drawing.Point(180, 303)
+        Me.RadButton2.Location = New System.Drawing.Point(180, 332)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(125, 36)
         Me.RadButton2.TabIndex = 3
@@ -86,7 +86,7 @@ Partial Class RadForm1
         'RadButton1
         '
         Me.RadButton1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton1.Location = New System.Drawing.Point(35, 303)
+        Me.RadButton1.Location = New System.Drawing.Point(35, 332)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(139, 36)
         Me.RadButton1.TabIndex = 2
@@ -97,7 +97,7 @@ Partial Class RadForm1
         '
         Me.RadTextBox2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadTextBox2.ForeColor = System.Drawing.Color.Gray
-        Me.RadTextBox2.Location = New System.Drawing.Point(35, 259)
+        Me.RadTextBox2.Location = New System.Drawing.Point(35, 288)
         Me.RadTextBox2.Name = "RadTextBox2"
         Me.RadTextBox2.Size = New System.Drawing.Size(270, 42)
         Me.RadTextBox2.TabIndex = 1
@@ -108,7 +108,7 @@ Partial Class RadForm1
         '
         Me.RadTextBox1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadTextBox1.ForeColor = System.Drawing.Color.Gray
-        Me.RadTextBox1.Location = New System.Drawing.Point(35, 217)
+        Me.RadTextBox1.Location = New System.Drawing.Point(35, 246)
         Me.RadTextBox1.Name = "RadTextBox1"
         Me.RadTextBox1.Size = New System.Drawing.Size(270, 42)
         Me.RadTextBox1.TabIndex = 0
@@ -120,7 +120,7 @@ Partial Class RadForm1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.CovidTestResult.My.Resources.Resources.trianglify_background
-        Me.ClientSize = New System.Drawing.Size(480, 445)
+        Me.ClientSize = New System.Drawing.Size(480, 482)
         Me.Controls.Add(Me.RadGroupBox1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False

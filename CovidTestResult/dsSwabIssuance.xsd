@@ -12,7 +12,7 @@
   <xs:element name="dsSwabIssuance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSwabIssuance" msprop:Generator_UserDSName="dsSwabIssuance">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SwabIssuance" msprop:Generator_TableClassName="SwabIssuanceDataTable" msprop:Generator_TableVarName="tableSwabIssuance" msprop:Generator_RowChangedName="SwabIssuanceRowChanged" msprop:Generator_TablePropName="SwabIssuance" msprop:Generator_RowDeletingName="SwabIssuanceRowDeleting" msprop:Generator_RowChangingName="SwabIssuanceRowChanging" msprop:Generator_RowEvHandlerName="SwabIssuanceRowChangeEventHandler" msprop:Generator_RowDeletedName="SwabIssuanceRowDeleted" msprop:Generator_RowClassName="SwabIssuanceRow" msprop:Generator_UserTableName="SwabIssuance" msprop:Generator_RowEvArgName="SwabIssuanceRowChangeEvent">
+        <xs:element name="SwabIssuance" msprop:Generator_TableClassName="SwabIssuanceDataTable" msprop:Generator_TableVarName="tableSwabIssuance" msprop:Generator_TablePropName="SwabIssuance" msprop:Generator_RowDeletingName="SwabIssuanceRowDeleting" msprop:Generator_RowChangingName="SwabIssuanceRowChanging" msprop:Generator_RowEvHandlerName="SwabIssuanceRowChangeEventHandler" msprop:Generator_RowDeletedName="SwabIssuanceRowDeleted" msprop:Generator_UserTableName="SwabIssuance" msprop:Generator_RowChangedName="SwabIssuanceRowChanged" msprop:Generator_RowEvArgName="SwabIssuanceRowChangeEvent" msprop:Generator_RowClassName="SwabIssuanceRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
@@ -20,6 +20,7 @@
               <xs:element name="TestResult" msprop:Generator_ColumnVarNameInTable="columnTestResult" msprop:Generator_ColumnPropNameInRow="TestResult" msprop:Generator_ColumnPropNameInTable="TestResultColumn" msprop:Generator_UserColumnName="TestResult" type="xs:string" minOccurs="0" />
               <xs:element name="TestInterpretation" msprop:Generator_ColumnVarNameInTable="columnTestInterpretation" msprop:Generator_ColumnPropNameInRow="TestInterpretation" msprop:Generator_ColumnPropNameInTable="TestInterpretationColumn" msprop:Generator_UserColumnName="TestInterpretation" type="xs:string" minOccurs="0" />
               <xs:element name="DateSpecimenCollected" msprop:Generator_ColumnVarNameInTable="columnDateSpecimenCollected" msprop:Generator_ColumnPropNameInRow="DateSpecimenCollected" msprop:Generator_ColumnPropNameInTable="DateSpecimenCollectedColumn" msprop:Generator_UserColumnName="DateSpecimenCollected" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SwabIssuanceCode" msprop:Generator_ColumnVarNameInTable="columnSwabIssuanceCode" msprop:Generator_ColumnPropNameInRow="SwabIssuanceCode" msprop:Generator_ColumnPropNameInTable="SwabIssuanceCodeColumn" msprop:Generator_UserColumnName="SwabIssuanceCode" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

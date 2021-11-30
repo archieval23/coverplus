@@ -38,6 +38,7 @@ Partial Class FrmDashboard
         Me.RadPageViewPage4 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.gridSwabIssuanceResult = New Telerik.WinControls.UI.RadGridView()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.dropcustomer = New Telerik.WinControls.UI.RadDropDownList()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton5 = New Telerik.WinControls.UI.RadButton()
@@ -67,6 +68,7 @@ Partial Class FrmDashboard
         CType(Me.gridSwabIssuanceResult.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dropcustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,7 +105,7 @@ Partial Class FrmDashboard
         Me.RadPageViewPage2.ItemSize = New System.Drawing.SizeF(153.0!, 49.0!)
         Me.RadPageViewPage2.Location = New System.Drawing.Point(206, 5)
         Me.RadPageViewPage2.Name = "RadPageViewPage2"
-        Me.RadPageViewPage2.Size = New System.Drawing.Size(1281, 1028)
+        Me.RadPageViewPage2.Size = New System.Drawing.Size(1334, 1030)
         Me.RadPageViewPage2.Text = "Dashboard"
         '
         'gridCustomer
@@ -138,7 +140,7 @@ Partial Class FrmDashboard
         Me.gridCustomer.Name = "gridCustomer"
         Me.gridCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridCustomer.ShowHeaderCellButtons = True
-        Me.gridCustomer.Size = New System.Drawing.Size(1281, 974)
+        Me.gridCustomer.Size = New System.Drawing.Size(1334, 976)
         Me.gridCustomer.TabIndex = 10
         Me.gridCustomer.ThemeName = "ControlDefault"
         '
@@ -151,14 +153,14 @@ Partial Class FrmDashboard
         Me.RadPanel8.Dock = System.Windows.Forms.DockStyle.Top
         Me.RadPanel8.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel8.Name = "RadPanel8"
-        Me.RadPanel8.Size = New System.Drawing.Size(1281, 54)
+        Me.RadPanel8.Size = New System.Drawing.Size(1334, 54)
         Me.RadPanel8.TabIndex = 4
         '
         'RadButton6
         '
         Me.RadButton6.Dock = System.Windows.Forms.DockStyle.Right
         Me.RadButton6.Image = Global.CovidTestResult.My.Resources.Resources.generatereport
-        Me.RadButton6.Location = New System.Drawing.Point(1133, 0)
+        Me.RadButton6.Location = New System.Drawing.Point(1186, 0)
         Me.RadButton6.Name = "RadButton6"
         Me.RadButton6.Size = New System.Drawing.Size(148, 54)
         Me.RadButton6.TabIndex = 108
@@ -205,9 +207,9 @@ Partial Class FrmDashboard
         '
         Me.RadPageViewPage1.Controls.Add(Me.RadPageView2)
         Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(153.0!, 49.0!)
-        Me.RadPageViewPage1.Location = New System.Drawing.Point(305, 4)
+        Me.RadPageViewPage1.Location = New System.Drawing.Point(206, 5)
         Me.RadPageViewPage1.Name = "RadPageViewPage1"
-        Me.RadPageViewPage1.Size = New System.Drawing.Size(1236, 1032)
+        Me.RadPageViewPage1.Size = New System.Drawing.Size(1334, 1030)
         Me.RadPageViewPage1.Text = "Swab Issuance"
         '
         'RadPageView2
@@ -218,7 +220,7 @@ Partial Class FrmDashboard
         Me.RadPageView2.Location = New System.Drawing.Point(0, 0)
         Me.RadPageView2.Name = "RadPageView2"
         Me.RadPageView2.SelectedPage = Me.RadPageViewPage4
-        Me.RadPageView2.Size = New System.Drawing.Size(1236, 1032)
+        Me.RadPageView2.Size = New System.Drawing.Size(1334, 1030)
         Me.RadPageView2.TabIndex = 1
         Me.RadPageView2.ThemeName = "Material"
         '
@@ -226,9 +228,10 @@ Partial Class FrmDashboard
         '
         Me.RadPageViewPage4.Controls.Add(Me.gridSwabIssuanceResult)
         Me.RadPageViewPage4.Controls.Add(Me.RadPanel1)
-        Me.RadPageViewPage4.Location = New System.Drawing.Point(10, 41)
+        Me.RadPageViewPage4.ItemSize = New System.Drawing.SizeF(140.0!, 50.0!)
+        Me.RadPageViewPage4.Location = New System.Drawing.Point(6, 56)
         Me.RadPageViewPage4.Name = "RadPageViewPage4"
-        Me.RadPageViewPage4.Size = New System.Drawing.Size(1215, 980)
+        Me.RadPageViewPage4.Size = New System.Drawing.Size(1322, 968)
         Me.RadPageViewPage4.Text = "Swab Issuance"
         '
         'gridSwabIssuanceResult
@@ -240,7 +243,7 @@ Partial Class FrmDashboard
         Me.gridSwabIssuanceResult.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.gridSwabIssuanceResult.ForeColor = System.Drawing.Color.Black
         Me.gridSwabIssuanceResult.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.gridSwabIssuanceResult.Location = New System.Drawing.Point(0, 54)
+        Me.gridSwabIssuanceResult.Location = New System.Drawing.Point(0, 56)
         '
         '
         '
@@ -263,33 +266,44 @@ Partial Class FrmDashboard
         Me.gridSwabIssuanceResult.Name = "gridSwabIssuanceResult"
         Me.gridSwabIssuanceResult.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridSwabIssuanceResult.ShowHeaderCellButtons = True
-        Me.gridSwabIssuanceResult.Size = New System.Drawing.Size(1215, 926)
+        Me.gridSwabIssuanceResult.Size = New System.Drawing.Size(1322, 912)
         Me.gridSwabIssuanceResult.TabIndex = 9
         Me.gridSwabIssuanceResult.ThemeName = "ControlDefault"
         '
         'RadPanel1
         '
+        Me.RadPanel1.Controls.Add(Me.PictureBox1)
         Me.RadPanel1.Controls.Add(Me.dropcustomer)
         Me.RadPanel1.Controls.Add(Me.RadButton1)
         Me.RadPanel1.Controls.Add(Me.RadButton5)
         Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.RadPanel1.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel1.Name = "RadPanel1"
-        Me.RadPanel1.Size = New System.Drawing.Size(1215, 54)
+        Me.RadPanel1.Size = New System.Drawing.Size(1322, 56)
         Me.RadPanel1.TabIndex = 7
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(821, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(271, 260)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
         '
         'dropcustomer
         '
         Me.dropcustomer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.dropcustomer.Location = New System.Drawing.Point(9, 7)
         Me.dropcustomer.Name = "dropcustomer"
-        Me.dropcustomer.Size = New System.Drawing.Size(335, 36)
+        Me.dropcustomer.Size = New System.Drawing.Size(335, 41)
         Me.dropcustomer.TabIndex = 2
         Me.dropcustomer.Text = "Select Customer"
         Me.dropcustomer.ThemeName = "Material"
         '
         'RadButton1
         '
+        Me.RadButton1.Enabled = False
         Me.RadButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadButton1.Image = Global.CovidTestResult.My.Resources.Resources.Save_26px
         Me.RadButton1.Location = New System.Drawing.Point(582, 7)
@@ -314,9 +328,9 @@ Partial Class FrmDashboard
         '
         Me.RadPageViewPage3.Controls.Add(Me.RadPageView3)
         Me.RadPageViewPage3.ItemSize = New System.Drawing.SizeF(153.0!, 49.0!)
-        Me.RadPageViewPage3.Location = New System.Drawing.Point(305, 4)
+        Me.RadPageViewPage3.Location = New System.Drawing.Point(206, 5)
         Me.RadPageViewPage3.Name = "RadPageViewPage3"
-        Me.RadPageViewPage3.Size = New System.Drawing.Size(1236, 1032)
+        Me.RadPageViewPage3.Size = New System.Drawing.Size(1334, 1030)
         Me.RadPageViewPage3.Text = "Result Distribution"
         '
         'RadPageView3
@@ -327,16 +341,17 @@ Partial Class FrmDashboard
         Me.RadPageView3.Location = New System.Drawing.Point(0, 0)
         Me.RadPageView3.Name = "RadPageView3"
         Me.RadPageView3.SelectedPage = Me.RadPageViewPage5
-        Me.RadPageView3.Size = New System.Drawing.Size(1236, 1032)
+        Me.RadPageView3.Size = New System.Drawing.Size(1334, 1030)
         Me.RadPageView3.TabIndex = 2
         Me.RadPageView3.ThemeName = "Material"
         '
         'RadPageViewPage5
         '
         Me.RadPageViewPage5.Controls.Add(Me.gridResultDistribution)
-        Me.RadPageViewPage5.Location = New System.Drawing.Point(10, 41)
+        Me.RadPageViewPage5.ItemSize = New System.Drawing.SizeF(158.0!, 50.0!)
+        Me.RadPageViewPage5.Location = New System.Drawing.Point(6, 56)
         Me.RadPageViewPage5.Name = "RadPageViewPage5"
-        Me.RadPageViewPage5.Size = New System.Drawing.Size(1215, 980)
+        Me.RadPageViewPage5.Size = New System.Drawing.Size(1322, 968)
         Me.RadPageViewPage5.Text = "Result Distribution"
         '
         'gridResultDistribution
@@ -371,7 +386,7 @@ Partial Class FrmDashboard
         Me.gridResultDistribution.Name = "gridResultDistribution"
         Me.gridResultDistribution.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridResultDistribution.ShowHeaderCellButtons = True
-        Me.gridResultDistribution.Size = New System.Drawing.Size(1215, 980)
+        Me.gridResultDistribution.Size = New System.Drawing.Size(1322, 968)
         Me.gridResultDistribution.TabIndex = 10
         Me.gridResultDistribution.ThemeName = "ControlDefault"
         '
@@ -457,6 +472,7 @@ Partial Class FrmDashboard
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel1.ResumeLayout(False)
         Me.RadPanel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dropcustomer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -498,5 +514,6 @@ Partial Class FrmDashboard
     Friend WithEvents RadPageViewPage5 As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents gridResultDistribution As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadButton6 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
 

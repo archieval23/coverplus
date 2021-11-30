@@ -66,3 +66,4 @@ C:\Users\HP GAMING\source\repos\CovidTestResult\CovidTestResult\obj\x86\Debug\Co
 C:\Users\HP GAMING\source\repos\CovidTestResult\CovidTestResult\obj\x86\Debug\CovidTestResult.pdb
 C:\Users\HP GAMING\source\repos\CovidTestResult\CovidTestResult\obj\x86\Debug\CovidTestResult.vbprojAssemblyReference.cache
 C:\Users\HP GAMING\source\repos\CovidTestResult\CovidTestResult\obj\x86\Debug\CovidTestResult.FrmSendEmail.resources
+C:\Users\HP GAMING\source\repos\CovidTestResult\CovidTestResult\bin\Debug\QRCoder.dll
